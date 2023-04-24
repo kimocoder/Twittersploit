@@ -75,8 +75,7 @@ except:
 last_command = get_command(api, None)
 
 while True:
-    command = get_command(api, last_command)
-    if command:
+    if command := get_command(api, last_command):
         print(COMMAND_RECIEVED + command)
         time.sleep(2)
         last_command = command
